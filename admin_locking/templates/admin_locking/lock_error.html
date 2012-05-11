@@ -1,0 +1,22 @@
+{% load i18n %}
+
+{% blocktrans with username=obj.by.username until=until %}
+	<span id="admin_locking_alter_background"></span>
+	This page is <strong>locked</strong> by <strong>{{username}}</strong>
+	until <strong>{{until}}</strong>.
+	<i>You have two ways to proceed:</i>
+	<dl>
+		<dt>1) Reload</dt>
+		<dd>
+			Reload the page to see if the lock have been lifted. WARNING, 
+			this erases all changes you might have made on this page. 
+			<a href=".">Reload</a>.
+		</dd>
+		<dt>2) Try to save</dt>
+		<dd>
+			Press either of the save buttons to try and save the page. WARNING,
+			if the user holding the lock has made modifications since you
+			loaded the page, you will not be able to save your changes.
+		</dd>
+	</dl>
+{% endblocktrans %}
