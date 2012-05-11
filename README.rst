@@ -19,8 +19,13 @@ Installation
   
       (r'^admin_locking/', include('admin_locking.urls')),
 
-- Make all your modeladmins extend "LockingAdmin()"::
+- Make all your modeladmins extend "LockingAdmin"::
   
       from admin_locking.admin import LockingAdmin
       class MyModelAdmin(LockingAdmin):
       	  pass
+      	  
+API
+===
+
+Can be found here: https://github.com/runekaagaard/django-admin-locking/blob/master/admin_locking/api.py.
