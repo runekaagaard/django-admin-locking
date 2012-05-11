@@ -11,7 +11,7 @@ class Migration(SchemaMigration):
         # Adding model 'Lock'
         db.create_table('admin_locking_lock', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('by', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
             ('until', self.gf('django.db.models.fields.FloatField')()),
             ('content_type_id', self.gf('django.db.models.fields.IntegerField')()),
             ('object_id', self.gf('django.db.models.fields.IntegerField')()),
@@ -21,7 +21,7 @@ class Migration(SchemaMigration):
         # Adding model 'ObjectChangelog'
         db.create_table('admin_locking_objectchangelog', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('by', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
             ('time', self.gf('django.db.models.fields.FloatField')()),
             ('content_type_id', self.gf('django.db.models.fields.IntegerField')()),
             ('object_id', self.gf('django.db.models.fields.IntegerField')()),
@@ -41,7 +41,7 @@ class Migration(SchemaMigration):
     models = {
         'admin_locking.lock': {
             'Meta': {'object_name': 'Lock'},
-            'by': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
+            'user': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
             'content_type_id': ('django.db.models.fields.IntegerField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'object_id': ('django.db.models.fields.IntegerField', [], {}),
@@ -49,7 +49,7 @@ class Migration(SchemaMigration):
         },
         'admin_locking.objectchangelog': {
             'Meta': {'object_name': 'ObjectChangelog'},
-            'by': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
+            'user': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
             'content_type_id': ('django.db.models.fields.IntegerField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'object_id': ('django.db.models.fields.IntegerField', [], {}),

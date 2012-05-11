@@ -1,6 +1,6 @@
 {% load i18n %}
 
-{% blocktrans with username=obj.by.username until=until %}
+{% blocktrans with username=obj.user.username until=until %}
 	<span id="admin_locking_alter_background"></span>
 	This page is <strong>locked</strong> by <strong>{{username}}</strong>
 	until <strong>{{until}}</strong>.

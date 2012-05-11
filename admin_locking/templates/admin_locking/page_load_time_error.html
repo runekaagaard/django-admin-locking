@@ -1,6 +1,6 @@
 {% load i18n %}
 
-{% blocktrans with username=obj.by.username time=time %}
+{% blocktrans with username=obj.user.username time=time %}
 	<span id="admin_locking_alter_background"></span>
 	This page is <strong>stale</strong>. It has been saved by 
 	<strong>{{username}}</strong> at <strong>{{time}}</strong>. This means that

@@ -17,7 +17,7 @@ def raise_if_exists(query, exception=LockExistsException):
 
 def assert_no_lock_exists(obj, user):
     content_type_id = ContentType.objects.get_for_model(obj).pk
-    query = Lock.objects.exclude(by=user).filter(
+    query = Lock.objects.exclude(user=user).filter(
         until__gte=time.time(), content_type_id=content_type_id, 
         object_id=obj.pk).order_by('-pk')
     raise_if_exists(query)

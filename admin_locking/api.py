@@ -21,7 +21,7 @@ def lock(obj, user, steal=False):
     unlock(obj)
     content_type_id = ContentType.objects.get_for_model(obj).pk
     Lock(
-        by = user,
+        user = user,
         until = time.time() + ADMIN_LOCKING['lock_duration'],
         content_type_id = content_type_id,
         object_id = obj.pk,
@@ -40,5 +40,5 @@ def log_change(obj, user):
     Logs a change of the object given.
     """
     content_type_id = ContentType.objects.get_for_model(obj).pk
-    ObjectChangelog(by=user, time=time.time(),
+    ObjectChangelog(user=user, time=time.time(),
         content_type_id=content_type_id, object_id = obj.pk).save()
