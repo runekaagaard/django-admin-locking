@@ -12,7 +12,7 @@ from django.template.loader import render_to_string
 from admin_locking.exceptions import ObjectChangedException, LockExistsException
 from admin_locking import (assert_no_lock_exists, 
                            assert_object_not_changed_since)
-from admin_locking.api import lock, unlock
+from admin_locking.api import lock, unlock, log_change
 
 LOCK_ERROR_TEMPLATE_NAME = "admin_locking/lock_error.html"
 PAGE_LOAD_TIME_ERROR_TEMPLATE_NAME = "admin_locking/page_load_time_error.html"
@@ -90,7 +90,7 @@ class LockingAdmin(admin.ModelAdmin):
                 
         if obj is not None:
             assertions(obj, request)
-            add_object_changelog(obj, request)
+            log_change(obj, request.user)
             
         return super(LockingAdmin, self).save_model(request, obj, form, change)
     
