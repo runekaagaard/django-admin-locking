@@ -24,7 +24,17 @@ Installation
       from admin_locking.admin import LockingAdmin
       class MyModelAdmin(LockingAdmin):
       	  pass
-      	  
+
+Setttings
+=========
+
+The following settings are available::
+
+	ADMIN_LOCKING = {
+		# The number of seconds until a lock is lifted.
+		'lock_duration': 60 * 60,
+	}
+ 
 API
 ===
 
