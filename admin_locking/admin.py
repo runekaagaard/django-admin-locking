@@ -88,7 +88,7 @@ class LockingAdmin(admin.ModelAdmin):
             load_time = request.POST['admin_locking_page_load_time']
             assert_object_not_changed_since(obj, load_time)
                 
-        if obj is not None:
+        if obj.pk is not None:
             assertions(obj, request)
             log_change(obj, request.user)
             

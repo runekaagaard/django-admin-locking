@@ -34,7 +34,6 @@ def unlock(obj):
     content_type_id = ContentType.objects.get_for_model(obj).pk
     unlock_raw(content_type_id, obj.pk)
 
-
 def log_change(obj, user):
     """
     Logs a change of the object given.

@@ -1,17 +1,23 @@
 {% load i18n %}
 
 {% blocktrans with username=obj.user.username time=time %}
-	<span id="admin_locking_alter_background"></span>
-	This page is <strong>stale</strong>. It has been saved by 
-	<strong>{{username}}</strong> at <strong>{{time}}</strong>. This means that
-	you <strong>cannot save this page!</strong>
-	<i>If you have unsaved changes, do the following:</i>
-	<dl>
-		<dt>Manually transfer changes</dt>
-		<dd>
-			Open the page in a new tab and manually transfer the changes from 
-			this tab to the new tab. Then close this tab. 
-			<a href="." target="_blank">Open page in new tab</a>.
-		</dd>
-	</dl>
+<span id="admin_locking_alter_background"></span>
+This page is <strong>stale</strong>. It has been saved by 
+<strong>{{username}}</strong> at <strong>{{time}}</strong>. This means that
+you <strong>cannot save this page!</strong>
+<i>You have two ways to proceed:</i>
+<dl>
+	<dt>1) Refresh the page</dt>
+	<dd>
+		Get the latest version of the page. WARNING, this erases all changes
+		you might have made.  
+		<a href=".">Refresh page</a>.
+	</dd>
+	<dt>2) Manually transfer changes</dt>
+	<dd>
+		Open the page in a new tab and manually transfer the changes from 
+		this tab to the new tab. Then close this tab. 
+		<a href="." target="_blank">Open page in new tab</a>.
+	</dd>
+</dl>
 {% endblocktrans %}

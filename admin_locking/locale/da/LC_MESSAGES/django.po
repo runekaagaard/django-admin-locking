@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-16 11:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: models.py:8
+msgid "Locked until"
+msgstr "Låst indtil"
+
+#: models.py:9 models.py:19
+msgid "Content type id"
+msgstr "Indholdstype id"
+
+#: models.py:10 models.py:20
+msgid "Object id"
+msgstr "Objekt id"
+
+#: models.py:13
+msgid "Lock"
+msgstr "Lås"
+
+#: models.py:14
+msgid "Locks"
+msgstr "Låse"
+
+#: models.py:18
+msgid "Time"
+msgstr "Tid"
+
+#: models.py:23
+msgid "Object changelog entry"
+msgstr "Objekt ændringsindtegning"
+
+#: models.py:24
+msgid "Object changelog entries"
+msgstr "Objekt ændringsindtegninger"
+
+#: templates/admin_locking/lock_error.html:3
+#, python-format
+msgid ""
+"\n"
+"<span id=\"admin_locking_alter_background\"></span>\n"
+"This page is <strong>locked</strong> by <strong>%(username)s</strong>\n"
+"until <strong>%(until)s</strong>.\n"
+"<i>You have two ways to proceed:</i>\n"
+"<dl>\n"
+"\t<dt>1) Reload</dt>\n"
+"\t<dd>\n"
+"\t\tReload the page to see if the lock have been lifted. WARNING, \n"
+"\t\tthis erases all changes you might have made. \n"
+"\t\t<a href=\".\">Reload</a>.\n"
+"\t</dd>\n"
+"\t<dt>2) Try to save</dt>\n"
+"\t<dd>\n"
+"\t\tPress either of the save buttons to try and save the page. WARNING,\n"
+"\t\tif the user holding the lock has made modifications since you\n"
+"\t\tloaded the page, you will not be able to save your changes.\n"
+"\t</dd>\n"
+"</dl>\n"
+msgstr ""
+"\n"
+"<span id=\"admin_locking_alter_background\"></span>\n"
+"Denne side er <strong>låst</strong> af <strong>%(username)s</strong>\n"
+"indtil <strong>%(until)s</strong>.\n"
+"<i>Du kan fortsætte på to måder:</i>\n"
+"<dl>\n"
+"\t<dt>1) Genlæs</dt>\n"
+"\t<dd>\n"
+"\t\tGenlæs siden for at se om den er blevet låst op. ADVARSEL, \n"
+"\t\tdu mister alle ændringer du måtte have foretaget. \n"
+"\t\t<a href=\".\">Genlæs</a>.\n"
+"\t</dd>\n"
+"\t<dt>2) Forsøg at gemme</dt>\n"
+"\t<dd>\n"
+"\t\tPrøv at trykke på een af gemknapperne. ADVARSEL, \n"
+"\t\thvis brugeren der ejer låsen har lavet ændringerne siden du \n"
+"\t\tindlæste siden, kan du ikke gemme dine ændringer.\n"
+"\t</dd>\n"
+"</dl>\n"
+
+#: templates/admin_locking/page_load_time_error.html:3
+#, python-format
+msgid ""
+"\n"
+"<span id=\"admin_locking_alter_background\"></span>\n"
+"This page is <strong>stale</strong>. It has been saved by \n"
+"<strong>%(username)s</strong> at <strong>%(time)s</strong>. This means that\n"
+"you <strong>cannot save this page!</strong>\n"
+"<i>You have two ways to proceed:</i>\n"
+"<dl>\n"
+"\t<dt>1) Refresh the page</dt>\n"
+"\t<dd>\n"
+"\t\tGet the latest version of the page. WARNING, this erases all changes\n"
+"\t\tyou might have made.  \n"
+"\t\t<a href=\".\">Refresh page</a>.\n"
+"\t</dd>\n"
+"\t<dt>2) Manually transfer changes</dt>\n"
+"\t<dd>\n"
+"\t\tOpen the page in a new tab and manually transfer the changes from \n"
+"\t\tthis tab to the new tab. Then close this tab. \n"
+"\t\t<a href=\".\" target=\"_blank\">Open page in new tab</a>.\n"
+"\t</dd>\n"
+"</dl>\n"
+msgstr ""
+"\n"
+"<span id=\"admin_locking_alter_background\"></span>\n"
+"Siden er <strong>forældet</strong> fordi den er blevet gemt af \n"
+"<strong>%(username)s</strong> kl. <strong>%(time)s</strong>. \n"
+"Du kan derfor <strong>ikke gemme siden!</strong>\n"
+"<i>Du kan fortsætte på to måder:</i>\n"
+"<dl>\n"
+"\t<dt>1) Genlæs siden</dt>\n"
+"\t<dd>\n"
+"\t\tHent den seneste version af siden. ADVARSEL, \n"
+"\t\tdu mister alle ændringer du måtte have foretaget. \n"
+"\t\t<a href=\".\">Genlæs</a>.\n"
+"\t</dd>\n"
+"\t<dt>2) Overfør ændringerne manuelt</dt>\n"
+"\t<dd>\n"
+"\t\tÅben siden i et nyt faneblad og overfør ændringerne fra dette faneblad "
+"til \n"
+"\t\tdet nye. Luk derefter dette faneblad. \n"
+"\t\t<a href=\".\" target=\"_blank\">Nyt faneblad</a>.\n"
+"\t</dd>\n"
+"</dl>\n"
